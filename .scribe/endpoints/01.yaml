@@ -1,0 +1,118 @@
+name: Usuarios
+description: 'Servicios de Usuarios'
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/auth/register
+    metadata:
+      groupName: Usuarios
+      groupDescription: 'Servicios de Usuarios'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Registrar un usuario'
+      description: 'Este servicio permite registrar un usuario en el sistema'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'El nombre del usuario.'
+        required: true
+        example: pepe
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'El correo del usuario.'
+        required: true
+        example: pepe@gmail.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'La contraseña del usuario.'
+        required: true
+        example: secret
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: pepe
+      email: pepe@gmail.com
+      password: secret
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/auth/login
+    metadata:
+      groupName: Usuarios
+      groupDescription: 'Servicios de Usuarios'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Loguear un usuario'
+      description: 'Este servicio permite que un usuario acceda al sistema'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'El correo del usuario.'
+        required: true
+        example: pepe@gmail.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'La contraseña del usuario.'
+        required: true
+        example: '|]|{+-'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: pepe@gmail.com
+      password: '|]|{+-'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
