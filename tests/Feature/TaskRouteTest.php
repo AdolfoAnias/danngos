@@ -20,7 +20,8 @@ class TaskRouteTest extends TestCase
     
     public function testVisitTheHomePage()
     {    
-        $response = $this->call('GET', '/api/task');
+        //$response = $this->call('GET', '/api/task');
+        $response = $this->get('/api/task');
         $this->assertEquals(200, $response->status());            
     }    
 }

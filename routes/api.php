@@ -12,7 +12,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::post('/auth/register', [RegisterController::class, 'registerUser']);
-Route::post('/auth/login', [LoginController::class, 'loginUser']);
+Route::post('/auth/login', [LoginController::class, 'loginUser'])->name('login');
 
 Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::get('task', [TaskController::class, 'index'])->name('task.index');

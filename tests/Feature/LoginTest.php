@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -22,10 +23,12 @@ class LoginTest extends TestCase
     /** @test */
     public function it_visit_page_of_login()
     {
-        $response = $this->post('/api/auth/login');
-
-        $response->assertSuccessful();        
-        
+        $response = $this->post('/api/auth/login', [
+            'email' => 'adolfoanias@gmail.com',
+            'password' => '12345678',
+        ]);
+ 
+        $response->assertStatus(200);
     }    
     
     /** @test */
